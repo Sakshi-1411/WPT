@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration from</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Registration From:</legend> 
+        <label for="fname">Firstname: </label>
+        <input type="text" id="fname" name="fname"/>
+        <br>
+        <br>
+        <label for="lname">Lastname: </label>
+        <input type="text" id="lname" name="lname"/>
+        <br><br>
+        <label for="dob">DateOfBirth: </label>
+        <input type="date" id="dob" name="dob"/>
+        <br><br>
+        <label for="add">Address:</label>
+        <br>
+        <textarea id="add" name="add" rows="10" cols="35"></textarea>
+        <br><br>
+        <label for="state" id="state">State:</label>
+        <select name="state" id="state">
+            <option>Select</option>
+            <option value="MH">Maharshtra</option>
+            <option value="KA">Karnataka</option>
+            <option value="Goa">Goa</option>
+            <option value="CG">Chhattisgarh</option>
+            <option value="MP">Madhya Pradesh</option>
+        </select>
+        <br><br>
+        <label for="edu" id="edu">Education: </label>
+        <select name="edu" id="edu">
+            <option>Select</option>
+            <option value="10th">SSC</option>
+            <option value="10th">CBSE</option>
+            <option value="10th">ICSE</option>
+            <option value="12th">HSC</option>
+            <option value="12th">CBSE</option>
+            <option value="12th">ICSE</option>
+            <option value="deg">BE</option>
+            <option value="deg">Btech</option>
+            <option value="deg">Bsc</option>
+            <option value="pg">ME</option>
+            <option value="pg">MTech</option>
+            <option value="pg">CDAC</option>
+            <option value="pg">Msc</option>
+        </select>
+        <br><br>
+
+
+        <label for="gender" id="gender">Gender: </label>
+        <input type="radio" name="gender" id="Male" value="Male"/>
+        <label for="Male">Male</label>
+        <input type="radio" name="gender" id="Female" value="Female"/>
+        <label for="Female">Female</label>
+        <br><br>
+
+        <label for="pwd">Password</label>
+        <input type="password" id="password" name="password" value=""/>
+        
+        <br>
+        <br>
+
+
+        <button type="button">OK</button>
+        <button type="button">Cancel</button>
+
+        <br>
+    </fieldset>
+ 
+</body>
+</html>
