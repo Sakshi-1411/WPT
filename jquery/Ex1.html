@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex! JQ</title>
+</head>
+<script src="jquery-3.6.0.js"></script>
+<script>
+    $().ready(() =>
+    {
+        console.log("Document is ready for manipulation")
+        $('#id1').click(() => {
+            console.log("Click On B1")
+        })
+
+        $('#id2').click(() => {
+            console.log("Click On B2")
+        })
+    })
+
+    console.log("last line")
+</script>
+<body>
+    <input type="button" value="B1" id="id1">
+    <input type="button" value="B2" id="id2">
+</body>
+</html>

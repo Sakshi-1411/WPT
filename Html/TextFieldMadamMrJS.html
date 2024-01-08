@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS HTML TextField</title>
+
+    <script>
+     function f1(){
+        let m = document.getElementById("m").checked
+
+        let f = document.getElementById("f").checked
+
+        if(m){
+
+            let FirstName = document.getElementById("f1").value 
+
+            let LastName=document.getElementById("l").value
+            
+
+            let name = `Mr. ${FirstName} ${LastName}`
+
+            document.getElementById("sp1").innerHTML = name
+        }
+
+        if(f){
+            let FirstName = document.getElementById("f1").value 
+
+                let LastName=document.getElementById("l").value
+
+
+                let name = `Mr. ${FirstName} ${LastName}`
+
+            document.getElementById("sp1").innerHTML = name
+        }
+
+    }
+    </script>
+</head>
+<body>
+    Enter FirstName: <input type="text" id = "f1"><br><br>
+
+    Enter LastName: <input type="text" id="l"><br><br>
+
+    Gender:  <br>
+
+    Male: <input type="radio" id="m" name="g" onclick="f1()">
+
+    Female: <input type="radio" id="f" name="g" onclick="f1()">
+
+    <p>Result:  <span id="sp1"></span></p>
+</body>
+</html>

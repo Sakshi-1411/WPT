@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opertions</title>
+    <script>
+        function calculate()
+        {
+            let x = parseInt(document.getElementById("n1").value)
+
+            let y = parseInt(document.getElementById("n2").value)
+
+            let op = document.getElementById("opertion").value
+
+            let result;
+
+            switch(op)
+            {
+                case '+' : result = x + y ; 
+                break;
+
+                case '-' : result = x - y ; 
+                break;
+
+                case '*' : result = x * y ; 
+                break;
+
+                case '/' : result = x / y ; 
+                break;
+            }
+
+            let out_string = x + " " + op + " " + y + " = " + result;
+            document.getElementById("sp1").innerHTML = out_string; 
+        }
+    </script>
+
+</head>
+<body>
+    <fieldset style="width: 70%; margin-left: auto; margin-right: auto;">
+         Enter First Number : <input type="number" id="n1" value="0" />
+
+         Enter Second Number : <input type="number" id="n2" value="0" />
+
+         Select Opertion:
+         <select  id="opertion" onchange="calculate()">
+            <option>Select</option>
+            <option>+</option>
+            <option>-</option>
+            <option>*</option>
+            <option>/</option>
+        </select>
+
+        <p style="text-align: center; color: red;">The Result: <span id="sp1"></span></p>
+    </fieldset>
+</body>
+</html>

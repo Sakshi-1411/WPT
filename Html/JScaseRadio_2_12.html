@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS and HTML Radio</title>
+
+    <script>
+        function capital(){
+            let a = document.getElementById("t1").value
+            let upper = a.toUpperCase()
+            document.getElementById("cap1").innerHTML =  upper
+        }
+
+        function smallcase(){
+            let a = document.getElementById("t1").value
+            let smaller = a.toLowerCase()
+            document.getElementById("cap1").innerHTML = smaller
+        }
+
+        function titlecase(){
+            let a = document.getElementById("t1").value
+            let title = a.toLowerCase.split(' ');
+
+            for(var i=0; i<a.length; i++){
+                a[i] = a[i].char(0).toUpperCase()+a[i].slice(1);
+            }
+            document.getElementById("cap1").innerHTML = a ;
+        }
+    </script>
+</head>
+<body>
+    <fieldset style="width: 70; margin-left: auto; margin-right: auto;">
+        <label>Enter String</label>
+        <input type="text" id="t1"/><br> <br>
+        
+        <label><input type="radio" name="radio" onclick="capital()">Capital</label>
+        <label><input type="radio" name="radio" onclick="smallcase()">SmallCase</label>
+        <label><input type="radio" name="radio" onclick="titlecase()">TitleCase</label>
+        <label>Result: </label><p id="cap1"></p>
+    </fieldset>
+</body>
+</html>

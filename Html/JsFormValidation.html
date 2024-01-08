@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Vaildation</title>
+</head>
+<script>
+    function f1(){
+        let name = document.getElementById("i1").value
+        let College = document.getElementById("i2").value
+        if(name.trim().length==0){
+            alert("invalid")
+        }
+        else{
+            let form = document.getElementById("form1")
+            form.submit();
+        }
+    }
+</script>
+<body>
+    <form action="F:\WPT_pratice\Html\RegisterationForm.Html" id="form1">
+        Enter Name: <input type="text" id="i1">
+
+        <br>
+
+        Enter College: <input type="text" minlength="4" maxlength="15" id="i2">
+
+        <br>
+
+        <input type="button" onclick="f1()" value="submit">
+    </form>
+</body>
+</html>

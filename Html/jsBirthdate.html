@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birth day</title>
+</head>
+<script>
+    function f1()
+    {
+        let today = new Date()
+            console.log(today)
+            let dob = new Date(document.getElementById("d").value)
+            let diff = today-dob;
+            let value = `Hello`
+            document.getElementById("m").innerHTML = dob
+    }
+</script>
+<body>
+    <center>
+        Enter DOB: <input type="date" id="d" onblur="f1()">
+        <input type="checkbox" onclick="f1()">
+        <input type="button" onclick="f1()" value="Enter">
+        <p>Message:  <span id="m"></span></p>
+    </center>
+</body>
+</html>

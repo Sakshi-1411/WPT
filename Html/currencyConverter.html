@@ -3,49 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>currencyConverter</title>
+    <title>Currency Converter</title>
 </head>
 <script>
     function f1(){
-        let Ruppe = parseInt(document.getElementById("ruppe").value)
-        let Curren = (document.getElementById("currency").value)
+        let Ruppe = parseInt(document.getElementById("Ruppe").value)
+        let Currency = document.getElementById("Currency").value
+
         let output
 
-        switch(Curren)
-        {
-            case "dollar" : output = Ruppe/83.38;break;
-            case "Euro":output=Ruppe/89.91;break;
-            case "dirham": output=Ruppe/22.71;break;
-            case "yen":output=Ruppe/0.58;break;
+        switch (Currency) {
+            case "dollar": output = Ruppe/83.38;break;
+            case "euro" : output = Ruppe/89.31;break;
+            case "dirham":output = Ruppe/22.71;break;
+            case "yen" : output = Ruppe/0.58;break;
         }
 
-        let Output = ` ${Curren}  ${"is"} ${output} ` 
+        let Output = ` ${Currency} ${"is"} ${output}`
         document.getElementById("ConverterAmount").innerHTML=Output
     }
 </script>
 <body>
-    <center><h1 style="color: black;">Currency Converter</h1>
-    <br>
+   <h1>Curency Converter</h1> 
+   <br>
+   Ruppe:
+   <input type="number" id="Ruppe">
+   select Currency: <select id="Currency" onchange="f1()">
+    <option>select</option>
+    <option value="doller">Doller</option>
+    <option value="euro">Euro</option>
+    <option value="dirham">Dirham</option>
+    <option value="yen">Yen</option>
+</select>
 
-    <label>Ruppe</label>
-    <input type="number" id="ruppe"  name="ruppe"/>
-
-    <pre>           </pre>
-
-    <label for="selectcurrency" id="selectcurrency" >Select Currency:</label>
-    <select id="currency" name="currency" onblur="f1()">
-        <option>Select</option>
-        <option value="dollar">Dollar</option>
-        <option value="euro">Euro</option>
-        <option value="dihram">Dihram</option>
-        <option value="yen">yen</option>
-     
-    </select>
-
-
-<p id ="ConverterAmount" style="color: brown;"><i><b>Converter Amount </b></i></p>
-
-    
-    </center>
+<p><b>Converter Amount: </b><span id="ConverterAmount" style="background-color: bisque;"></span></p>
 </body>
-</html> 
+</html>

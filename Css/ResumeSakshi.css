@@ -1,0 +1,33 @@
+body{
+    background-color: blanchedalmond;
+    
+}
+
+/*tag */
+table{
+    border: "5";
+    background-color: beige;
+    text-align: center;
+    text-decoration: dashed;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*id*/
+#th1{
+    border:"5ch";
+    height:"5px";
+    border-color: black;
+}
+
+/*class*/
+.hii
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 5;
+}
+
+
+/*universal*/
+*{
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(174, 195, 218));
+}

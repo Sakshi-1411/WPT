@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>currencyConverter</title>
+    <script>
+        function f1(){
+            let re=parseInt(document.getElementById("i1").value)
+            let d=document.getElementById("o1").value
+           
+            let output
+
+            switch(d){
+                case "dollar":output=re/83.38;break;
+                case "Euro":output=re/89.91;break;
+                case "dirham":  output=re/22.71;break;
+                case "yen": output=re/0.58;break;
+            }
+          
+            let oo=`${d} ${"is"} ${output}`
+            document.getElementById("sp1").innerHTML=oo
+
+        }
+    </script>
+    <Style>
+    #o1{
+        border-radius: 2%;
+        border-color: aquamarine;
+        margin-bottom:2%;
+        padding: 2% 3% 4% 5%;
+        
+    }
+    h1{
+        font-size: larger;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-style: oblique;
+    }
+    
+    </Style>
+</head>
+<body>
+    <style>
+        body{
+            background-image: url(currency.jpg);
+        }
+    </style>
+    <center>
+        <h1>CURRENCY CONVERTER </h1>
+       
+        <br>
+    Rupee: <input type="number" id="i1">
+   select currency: <select id="o1" onchange="f1()">
+        <option>select</option>
+        <option>dollar</option>
+        <option>Euro</option>
+        <option>dirham</option>
+        <option>yen</option>
+    </select>    
+    <p><b>converted amount to </b><span id="sp1" style="background-color: aliceblue;"></span> </p>
+</center>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<script>
+    function f1(){
+        let inputelemt = document.getElementById("i1")
+        let s = inputelemt.value
+        let ustr = s.toUpperCase()
+        //or
+        // let inputelemt = document.getElementById("i1").value
+        // let ustr =inputelemt.toUpperCase();
+        
+        console.log(ustr)
+        document.getElementById("i2").innerHTML=ustr
+    }
+</script>
+<body>
+    Enter String : <input type="text" id="i1">
+    <input type="button" value="show uppercase" onclick="f1()">
+    <p id="i2"></p>
+</body>
+</html>
